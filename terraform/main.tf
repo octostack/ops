@@ -55,3 +55,34 @@ resource "cloudflare_record" "api" {
   ttl     = 300
   proxied = true
 }
+
+resource "cloudflare_record" "mx1" {
+  zone_id  = data.cloudflare_zone.domain.id
+  name     = "@"
+  type     = "MX"
+  value    = "route1.mx.cloudflare.net"
+  priority = 83
+}
+
+resource "cloudflare_record" "mx1" {
+  zone_id  = data.cloudflare_zone.domain.id
+  name     = "@"
+  type     = "MX"
+  value    = "route2.mx.cloudflare.net"
+  priority = 34
+}
+
+resource "cloudflare_record" "mx1" {
+  zone_id  = data.cloudflare_zone.domain.id
+  name     = "@"
+  type     = "MX"
+  value    = "route3.mx.cloudflare.net"
+  priority = 52
+}
+
+resource "cloudflare_record" "mx1" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "@"
+  type    = "TXT"
+  value   = "spf1 include:_spf.mx.cloudflare.net ~all"
+}
