@@ -46,3 +46,12 @@ resource "cloudflare_record" "cnames" {
   ttl      = 300
   proxied  = false
 }
+
+resource "cloudflare_record" "api" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "api"
+  type    = "CNAME"
+  value   = var.heroku_api_cname
+  ttl     = 300
+  proxied = true
+}
