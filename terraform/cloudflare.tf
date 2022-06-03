@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = "~> 3.0"
-    }
-  }
-}
-
 provider "cloudflare" {
   # email   = var.cloudflare_email   # CLOUDFLARE_EMAIL
   # api_key = var.cloudflare_api_key # CLOUDFLARE_API_KEY
