@@ -19,13 +19,13 @@ variable "gh_pages_ipv6" {
 variable "gh_username" {
   description = "Your github username (or org name). Required if CNAMEs are specified."
   type        = string
-  default     = ""
+  default     = "octostack"
 }
 
 variable "gh_pages_cnames" {
   description = "CNAMEs for your github pages. This can span multiple repositories."
   type        = set(string)
-  default     = []
+  default     = ["www"]
 }
 
 variable "heroku_api_cname" {
