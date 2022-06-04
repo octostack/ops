@@ -25,7 +25,7 @@ variable "gh_username" {
 variable "gh_pages_cnames" {
   description = "CNAMEs for your github pages. This can span multiple repositories."
   type        = set(string)
-  default     = ["www"]
+  default     = ["www", "docs"]
 }
 
 variable "heroku_api_cname" {
